@@ -15,6 +15,135 @@
         able to sign up, update their personal information, and create a list of
         their favorite movies.
       </p>
+      <table>
+        <tr>
+          <th>URL</th>
+          <th>HTTP Method</th>
+          <th>Request body data format</th>
+          <th>Response body data format</th>
+        </tr>
+        <tr>
+          <td>Gets the list of data about ALL movies</td>
+          <td>/movies</td>
+          <td>GET</td>
+          <td>None</td>
+          <td>A JSON object holding list with data about all the Movies</td>
+        </tr>
+        <tr>
+          <td>Gets the data about a single movie, by title</td>
+          <td>/movies/[Title]</td>
+          <td>GET</td>
+          <td>None</td>
+          <td>
+            A JSON object holding data about a single movie, containing a title,
+            description, genre, director and image. Example:
+            <p>
+              { "Genre": { "Name": "Adventure", "Description": Adventure movies
+              are usually exciting stories, with new experiences or exotic
+              locales, very similar to or often paired with the action film
+              genre." }, "Director": { "Name": "Peter Jackson", "Bio": "Sir
+              Peter Robert Jackson is a New Zealand film director, screenwriter,
+              and film producer. He is best known as the director, writer, and
+              producer of the Lord of the Rings trilogy (2001–03) and the Hobbit
+              trilogy (2012–14), both of which are adapted from the novels of
+              the same name by J. R. R. Tolkien." } }
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td>Gets the list of data about ALL genres</td>
+          <td>/genres</td>
+          <td>GET</td>
+          <td>None</td>
+          <td>A JSON object holding a list with data about all the Genres</td>
+        </tr>
+
+        <tr>
+          <td>Gets the data about a single genre, by name</td>
+          <td>/genres/[Name]</td>
+          <td>GET</td>
+          <td>None</td>
+          <td>
+            A JSON object holding data about a movie genre. Example:
+            <p>
+              { "Name": "Action", "Description": "Action movies normally include
+              high energy, big-budget physical stunts and chases, battles,
+              fights, escapes, destructive crises - all designed for pure
+              audience escapism." }
+            </p>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Gets the list data about ALL directors</td>
+          <td>/directors</td>
+          <td>GET</td>
+          <td>None</td>
+          <td>
+            A JSON object holding a list with data about all the Directors
+          </td>
+        </tr>
+
+        <tr>
+          <td>Gets the data about a single director, by name</td>
+          <td>/directors/[Name]</td>
+          <td>GET</td>
+          <td>None</td>
+          <td>
+            A JSON object holding data about a director. Example:
+            <p>
+              { "Name": "Ted Demme", "Bio": "Edward Kern 'Ted' Demme was an
+              American director, producer, and actor.", "Birth": "1963",
+              "Death": "2002" }
+            </p>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Gets the list data about ALL Users</td>
+          <td>/users</td>
+          <td>GET</td>
+          <td>None</td>
+          <td>A JSON object holding a list with data about all the Users</td>
+        </tr>
+
+        <tr>
+          <td>Gets the data about a single user, by name</td>
+          <td>/users/[Name]</td>
+          <td>GET</td>
+          <td>None</td>
+          <td>
+            A JSON object holding data about a user. Example:
+            <p>
+              { "Name": "Ben Cohen", "Password": "cohenben143", "Email":
+              ben.cohen@gmail.com", "Birthday": "23-06-1992" }
+            </p>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Add data for a new user</td>
+          <td>/users</td>
+          <td>POST</td>
+          <td>
+            A JSON object holding data about the user to add, structured like:
+            <p>
+              { "Username": "Laura", "Password": "Laura12345",
+              "Email":"laura@hotmail.com", "Birthday": "11-11-1993" }
+            </p>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Deletes a user from our list by id</td>
+          <td>/users/[Id]</td>
+          <td>DELETE</td>
+          <td>None</td>
+          <td>
+            A message indicating thar user was removed from the list of users
+          </td>
+        </tr>
+      </table>
     </div>
   </body>
 </html>
